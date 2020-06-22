@@ -8,7 +8,7 @@ function showDevil(){
 }
 //
 function hideDevil(){
-	console.dir('hideDevil');
+	//console.dir('hideDevil');
 	//window.RunnerObj.stop();
 	window.RunnerObj.gameOver();
 	
