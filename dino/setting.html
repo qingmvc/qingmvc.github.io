@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+<title>setting设置</title>
+<style type="text/css">
+#startBox{
+	margin: 0 auto;
+    width: 480px;
+	margin: 0 auto;
+	
+    background: #eee;
+    padding: 1rem;
+    border-radius: 0.5rem;
+	
+    border: 1px solid #999;
+	line-height: 2.5;
+	margin-top: 1rem;
+}
+#startBox div{
+
+}
+.startBtn{
+	padding:0.5rem 1rem;
+	font-weight: 700;
+	font-size: 1.6rem;
+}
+#J-link{
+	width: 100%;
+}
+input[type="text"],
+input[type="number"]{
+	line-height: 1.6;
+}
+</style>
+<script>
+function startGame(){
+	//var time=document.getElementById("J-time").value;
+	var score=document.getElementById("J-score").value;
+	var href=location.href;
+	href=href.substr(0,href.lastIndexOf('/'))+"/index.html#S"+score;
+	//
+	document.getElementById("J-link").value=href;
+	window.open(href);
+}
+</script>
+</head>
+<body>
+<div id="startBox">
+	<div>1. Input the score for triggering</div>
+	<div>2. Click the button to jump to the game</div>
+	<div>2. Copy game links to share with others</div>
+	<div>1. 输入触发分数</div>
+	<div>2. 点击开始按钮跳转到游戏界面</div>
+	<div>3. 复制游戏链接分享</div>
+	<!--
+	<div>Time  : <input type="number" value="10" id="J-time"/></div>
+	-->
+	<div>Score : <input type="number" value="100" id="J-score"/></div>
+	<div><input type="text" placeholder="game link" id="J-link"/></div>
+	<div><input type="button" value="Start Game" onclick="startGame()" class="startBtn"/></div>
+</div>
+</body>
+</html>
